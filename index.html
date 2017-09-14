@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>recall</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        .nice {
+            color: gold;
+        }
+        .warning{
+            color: red;
+        }
+
+        .container {
+            width: 80%;
+            margin: 0 auto;
+        }
+
+        .container p {
+            line-height: 20px;
+            font-size: 16px;
+        }
+
+        .container > ul > li {
+            list-style-type: none;
+            line-height: 24px;
+        }
+
+        .container > ul > li > h5 {
+            cursor: pointer;
+        }
+
+        .container > ul > li > ul > li {
+            list-style-type: none;
+            line-height: 20px;
+            padding-left: 1em;
+        }
+
+        .container > ul > li > ul > li > a {
+            display: inline-block;
+            font-size: 14px;
+            color: blueviolet;
+            height: 20px;
+        }
+
+        .container > ul > li > ul > li > p {
+            font-size: 12px;
+            height: 16px;
+            padding-left: 2em;
+        }
+
+        .container > ul > li > ul > li > a:hover {
+            color: red;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <ul>
+        <li>
+            <h5>JS基础:GaZ</h5>
+            <ul>
+                <li class="item">
+                    <a href="#">JS书写的位置：执行时从上到下顺序执行。</a>
+                </li>
+                <li class="item">
+                    <a href="#">script的特殊属性</a>
+
+                    <p>async：继续加载，此代码加载完后执行。</p>
+
+                    <p>defer：继续加载，此代码于所有代码最后执行。</p>
+                </li>
+                <li class="item">
+                    <a href="#">console.log：控制台输出。</a><!---->
+                </li>
+                <li class="item">
+                    <a href="#">document.write：页面输出。</a>
+                </li>
+                <li class="item">
+                    <a href="#">变量：数字，字符串，布尔，数组，对象。</a>
+
+                    <p>number string array object</p>
+                </li>
+                <li class="item">
+                    <a href="#">不使用第三个变量，交换两个变量的值。</a>
+
+                    <p>
+                        1：a=15; b=16; a=b-a; b=b-a; a=b+a;
+                    </p>
+
+                    <p class="nice">
+                        2：a=15; b=16; a=a^b; b=a^b; a=a^b;
+                    </p>
+                </li>
+                <li class="item">
+                    <a href="#">关于什么时候是undefined什么时候是null?</a>
+
+                    <p>
+                        变量没声明null 变量声明但没赋值undefined
+                    </p>
+                </li>
+                <li class="item">
+                    <a href="#">数字number类型进制转换</a>
+
+                    <p>
+                        2-8-10-16 另外：不要判断两个有小数点的数是否相等
+                    </p>
+
+                    <p>
+                        Number.MIN_VALUE:5e-324=5*10^-324
+                    </p>
+
+                    <p>
+                        Number.MAX_VALUE:1.7976931348623157e+308=1.7976931348623157*10^308
+                    </p>
+                </li>
+                <li class="item">
+                    <a href="#">NaN</a>
+
+                    <p>属于number类型，意思是不是一个数</p>
+                </li>
+                <li class="item">
+                    <a href="#">字符串string</a>
+
+                    <p>有length 拼接+ 转义\</p>
+
+                    <p>字符串不可变，改就是删旧后新建</p>
+                </li>
+                <li class="item">
+                    <a href="#">数据类型相互转换</a>
+                    <p>值数据类型：number string boolean undefined null</p>
+                    <p>引用数据类型：array object</p>
+                    <p>toString() Number() parseInt() parseFloat() Boolean()</p>
+                </li>
+                <li class="item">
+                    <a href="#">数学运算符</a>
+
+                    <p class="nice">优先级顺序：() !++-- +-*/^% ><>=<= !====== &&||短路操作</p>
+                </li>
+                <li class="item">
+                    <a href="#">逻辑与判断</a>
+
+                    <p>if elseif else</p>
+
+                    <p>三元运算符 a=a%2==1?"odd":"even";</p>
+
+                    <p>switch case break</p>
+
+                    <p>while do while</p>
+
+                    <p>for continue</p>
+
+                    <p class="nice">兔子问题:1+2=3</p>
+
+                    <p class="nice">乘法表：document.write()</p>
+                </li>
+                <li>
+                    <a href="#">数组及其相关API(后续)</a>
+
+                    <p>push pop shift unshift reverse</p>
+                </li>
+                <li>
+                    <a href="#">Math方法</a>
+
+                    <p>.random() .max() .min() .abs() .round() .ceil() .floor() .PI .pow()</p>
+
+                    <p class="nice">随机一个范围(Math.random()*x)+y</p>
+
+                    <p>随机验证码每位0-9</p>
+                </li>
+                <li>
+                    <a href="#">冒泡排序</a>
+
+                    <p>排序执行靠数组中前一项和后一项的比较</p>
+                    <p class="nice">控制器思想</p>
+                </li>
+                <li>
+                    <a href="#">function:正确的时候做正确的事</a>
+                    <p>构造函数 自定义函数 形参 实参 作用域 局部变量 全局变量</p>
+                    <p class="nice">arguments this return</p>
+                    <p>匿名函数自调用(function(){})();</p>
+                    <p>递归：阶乘：斐波那契数列</p>
+                    <p class="nice">10!=function fn(10){if(n==1){return 1}else{return n=n*fn(n-1)}};</p>
+                    <p>回调：把函数a作为参数传入函数b，函数a为回调函数。</p>
+                    <p class="warning">预解析：</p>
+                    <p class="nice">构造函数：function Student(){}。var stu1 = new Student();创建对象object。</p>
+                </li>
+                <li>
+                    <a href="#">对象object</a>
+                    <p>键值对：属性和值的映射</p>
+                    <p>student.name或student["name"]作用相同，后者可以用变量替换则灵活。</p>
+                </li>
+                <li>
+                    <a href="#">值类型和引用类型</a>
+                    <p>值类型改值；引用类型改路径；</p>
+                </li>
+                <li>
+                    <a href="#">日期对象构造函数Date()，new</a>
+                    <p>.getFullYear() .getMonth() .getDate() .getHours() .getMinutes() .getSeconds() getMilliSeconds() .getDay()</p>
+                    <p>获取时间 设置时间 倒计时</p>
+                    <p>setTimeOut() setInterval()</p>
+                </li>
+                <li>
+                    <a href="#">数组构造函数Array()的方法</a>
+                    <p>.length .push() .unshift() .pop() .shift() .reverse() .sort(将函数作为参数：回调函数) .concat() .slice() .join() .split()</p>
+                </li>
+                <li>
+                    <a href="#">字符串构造函数String()的方法</a>
+                    <p>字符编码ASCII表</p>
+                    <p>.length .charAt() .charCodeAt():用来加密：转换成ASCII编码+key后转换成字符，解密反之。</p>
+                    <p>.indexOf() .lastIndexOf()：引号也算</p>
+                    <p>.toUpperCase() .toLowerCase()</p>
+                    <p class="nice">.slice(a,b)：和数组的不一样。[a,b)</p>
+                    <p>.trim()：清除所有空格。</p>
+                </li>
+            </ul>
+        </li>
+        <li>
+            <h5>DOM基础:帅3遍</h5>
+            <ul>
+                <li>
+                    <a href="#"></a>
+                    <p></p>
+                </li>
+            </ul>
+        </li>
+        <li>
+            <h5>JS特效:试一下</h5>
+            <ul></ul>
+        </li>
+        <li>
+            <h5>jQuery基础:试一下</h5>
+            <ul></ul>
+        </li>
+        <li>
+            <h5>H5C3基础:不会没关系</h5>
+            <ul></ul>
+        </li>
+        <li>
+            <h5>移动端基础:恢复</h5>
+            <ul></ul>
+        </li>
+        <li>
+            <h5>ajax和PHP基础:恢复</h5>
+            <ul></ul>
+        </li>
+        <li>
+            <h5>面向对象基础:就行了</h5>
+            <ul></ul>
+        </li>
+        <li>
+            <h5>canvas基础:恢复</h5>
+            <ul></ul>
+        </li>
+    </ul>
+</div>
+</body>
+</html>
